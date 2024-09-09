@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Account Detection</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" />
+        </div>
+
+        <div class="form-container">
+            <h2 id="form-title">Signup</h2>
+            <form id="auth-form">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Signup</button>
+                <div class="separator">
+                    <span>or</span>
+                </div>
+                <button class="google-btn" onclick="signInWithGoogle()">
+                    <i class="fab fa-google"></i>
+                    Sign in with Google
+                </button>
+                <p id="switch-form">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function switchToLogin() {
+            document.getElementById('form-title').innerText = 'Login';
+            document.getElementById('auth-form').innerHTML = `
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+                <div class="separator">
+                    <span>or</span>
+                </div>
+                <button class="google-btn" onclick="signInWithGoogle()">
+                    <i class="fab fa-google"></i>
+                    Sign in with Google
+                </button>
+                <p id="switch-form">Don't have an account? <a href="#" onclick="switchToSignup()">Signup</a></p>
+            `;
+        }
+
+        function switchToSignup() {
+            document.getElementById('form-title').innerText = 'Signup';
+            document.getElementById('auth-form').innerHTML = `
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Signup</button>
+                <div class="separator">
+                    <span>or</span>
+                </div>
+                <button class="google-btn" onclick="signInWithGoogle()">
+                    <i class="fab fa-google"></i>
+                    Sign in with Google
+                </button>
+                <p id="switch-form">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+            `;
+        }
+
+        function signInWithGoogle() {
+            // Implement Google Sign-In functionality here
+            console.log("Signing in with Google...");
+        }
+    </script>
+</body>
+</html>

@@ -1,94 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Account Detection</title>
-    <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 500px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+    width: 442px;
+    height: 96px;
+    object-fit: contain;
+    background-color: transparent;
+    display: flex;
+    padding-top: -7px;
+    max-width: 29rem;
+    margin-bottom: 20px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border-color: #66ccff;
+}
+
+button {
+  width: 100%;
+  background-color: #66ccff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3399ff;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: #3399ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Logo" />
-        </div>
 
-        <div class="form-container">
-            <h2 id="form-title">Signup</h2>
-            <form id="auth-form">
-                <div class="input-group">
-                    <input type="text" id="username" name="username" placeholder="Username" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                </div>
-                <button type="submit">Signup</button>
-                <div class="separator">
-                    <span>or</span>
-                </div>
-                <button class="google-btn" onclick="signInWithGoogle()">
-                    <i class="fab fa-google"></i>
-                    Sign in with Google
-                </button>
-                <p id="switch-form">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
-            </form>
-        </div>
-    </div>
+    
+<div class="container">
+  <h2>Sign Up Form </h2>
+  <img style="height: 160px;" src="Login.jpg" alt="Logo" class="logo">
+  <form>
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+    <button type="submit">Sign Up</button>
+    <p>Already have an account? <a href="login.html">Log In</a></p>
+  </form>
+</div>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script>
-        function switchToLogin() {
-            document.getElementById('form-title').innerText = 'Login';
-            document.getElementById('auth-form').innerHTML = `
-                <div class="input-group">
-                    <input type="text" id="username" name="username" placeholder="Username" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                </div>
-                <button type="submit">Login</button>
-                <div class="separator">
-                    <span>or</span>
-                </div>
-                <button class="google-btn" onclick="signInWithGoogle()">
-                    <i class="fab fa-google"></i>
-                    Sign in with Google
-                </button>
-                <p id="switch-form">Don't have an account? <a href="#" onclick="switchToSignup()">Signup</a></p>
-            `;
-        }
-
-        function switchToSignup() {
-            document.getElementById('form-title').innerText = 'Signup';
-            document.getElementById('auth-form').innerHTML = `
-                <div class="input-group">
-                    <input type="text" id="username" name="username" placeholder="Username" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                </div>
-                <button type="submit">Signup</button>
-                <div class="separator">
-                    <span>or</span>
-                </div>
-                <button class="google-btn" onclick="signInWithGoogle()">
-                    <i class="fab fa-google"></i>
-                    Sign in with Google
-                </button>
-                <p id="switch-form">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
-            `;
-        }
-
-        function signInWithGoogle() {
-            // Implement Google Sign-In functionality here
-            console.log("Signing in with Google...");
-        }
-    </script>
 </body>
 </html>

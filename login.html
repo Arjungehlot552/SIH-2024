@@ -1,0 +1,134 @@
+<html>
+<head>
+<style>
+  /* Use a web font from Google Fonts */
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif; /* Use a sans-serif font */
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .logo {
+    width: 442px;
+    height: 96px;
+    object-fit: contain;
+    background-color: transparent;
+    display: flex;
+    padding-top: -7px;
+    max-width: 29rem;
+    margin-bottom: 20px;
+}
+
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333; /* Use a darker color for the heading */
+  }
+
+  input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    border-color: #66ccff; /* Use a blue color for the focus border */
+    box-shadow: inset 0 0 5px rgba(102, 204, 255, 0.5); /* Add a subtle box shadow for the focus input */
+    transition: all 0.3s ease-in-out; /* Add a smooth transition for the focus input */
+  }
+
+  button {
+    width: 100%;
+    background-color: white; 
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    height: 46px;
+  }
+
+  button:hover {
+     /* Use a darker blue color for the button hover background */
+    box-shadow: 0 0 5px rgba(51, 153, 255, 0.5); /* Add a subtle box shadow for the button hover */
+    transform: scale(1.05); /* Add a slight scale effect for the button hover */
+    transition: all 0.3s ease-in-out; /* Add a smooth transition for the button hover */
+  }
+
+  p {
+    text-align: center;
+    color: #666666; /* Use a lighter color for the paragraph */
+  }
+
+  a {
+    color: #3399ff; /* Use a blue color for the link */
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline; /* Add an underline for the link hover */
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 10px; */
+  }
+
+  button {
+    width: 100px;
+    height: 46px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign in to SocialGuard</h2>
+        <img style="height: 160px;" src="Login.jpg" alt="LOGO.png" class="logo">
+        <form>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button style="background-color: #3399ff;" type="submit">Sign in</button>
+          <p>New to SocialGuard? <a class="display:flex; justify-content: center;  text-align: center;" style="color: #3399ff;" href="signup.html">Sign up</a></p>
+          <p><a style="justify-content: center;  text-align: center; color: #3399ff;" href="index.html">Home</a></p>
+        </form>
+        <h4 style="justify-content: center; text-align: center;">OR</h4>
+        <div class="buttons">
+          <button class="google"><img src="google.png" alt="Google"></button>
+          <button class="facebook"><img src="facebook.png" alt="Facebook"></button>
+          <button class="github"><img src="github.png" alt="Github"></button>
+          <button class="twitter"><img src="twiter.png" alt="Twitter"></button>
+        </div>
+      </div>
+
+<script src="script.js"></script>
+</body>
+</html>

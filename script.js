@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     tryAgainButton.addEventListener('click', handleTryAgain);
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const languageSelect = document.getElementById("language-select");
 
@@ -150,3 +149,37 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("hamburger").addEventListener("click", () => {
     document.getElementById("menu").classList.toggle("active");
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the number, the faster the count
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target;
+            }
+          };
+
+          updateCount();
+          observer.unobserve(counter); // Stop observing once the counter has been triggered
+        }
+      });
+    });
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  });

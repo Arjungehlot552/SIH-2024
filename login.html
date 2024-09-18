@@ -1,8 +1,5 @@
 <html>
 <head>
-  <title>S̴o̴c̴i̴a̴l̴ ̴G̴u̴a̴r̴d̴</title>
-  <link rel="icon" href="logo.avif">
-
 <style>
   /* Use a web font from Google Fonts */
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -15,106 +12,6 @@
     font-family: 'Roboto', sans-serif; /* Use a sans-serif font */
     background-color: #f4f4f4;
   }
-
-  
-/* Header and Navbar Styling */
-header {
-    background-color: #0a152f;
-    padding: 15px;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.navbar h1 {
-    margin: 0;
-}
-
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.menu li {
-    margin-left: 20px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.menu a:hover {
-    background-color: #1c2b4a;
-    color: #ffdd00;
-    border-radius: 5px;
-}
-
-.language-choice {
-    margin-left: 20px;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        display: none; /* Hidden by default */
-    }
-
-    .menu.active {
-        display: flex; /* Show when active */
-    }
-
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar h1 {
-        flex: 1;
-    }
-}
-
-
-
-
-/* Hamburger Menu */
-.hamburger {
-    margin-left: 280px;
-    margin-top: -20px;
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px;
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-}
 
   .container {
     width: 500px;
@@ -168,8 +65,9 @@ header {
     height: 46px;
   }
 
+
   button:hover {
-     /* Use a darker blue color for the button hover background */
+     
     box-shadow: 0 0 5px rgba(51, 153, 255, 0.5); /* Add a subtle box shadow for the button hover */
     transform: scale(1.05); /* Add a slight scale effect for the button hover */
     transition: all 0.3s ease-in-out; /* Add a smooth transition for the button hover */
@@ -209,175 +107,10 @@ header {
     width: 40px;
     height: 40px;
   }
-
-
-  .footer {
-    background-color: #0a152f;
-    color: white;
-    padding: 30px 20px;
-    position: relative;
-}
-
-.footer-info {
-    text-align: center;
-}
-
-.company-name {
-    margin-top: 0;
-}
-
-.social-icons {
-    margin-top: 15px;
-}
-
-.social-icon {
-    margin: 0 10px;
-    color: white;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #ffdd00;
-}
-
-.latest-news {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-  
-}
-
-.latest-news h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #0a152f;
-}
-
-.news-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    
-}
-
-.news-item h4 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #0a152f;
-}
-
-.news-item p {
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.news-author {
-    font-size: 14px;
-    color: #666;
-    margin-right: 10px;
-}
-
-.news-date {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Add responsive styling */
-@media (max-width: 768px) {
-    .latest-news h3 {
-        font-size: 24px;
-    }
-    .news-item h4 {
-        font-size: 18px;
-    }
-    .news-item p {
-        font-size: 15px;
-    }
-}
-
-
-.footer-links {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.footer-section {
-    width: 20%;
-    padding: 10px;
-}
-
-.footer-section h4 {
-    margin-top: 0;
-}
-
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin: 5px 0;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #ffdd00;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #ffffff33;
-    padding-top: 10px;
-}
-
-
 </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-        <a href="https://www.yourwebsite.com" class="logo-link">
-            <img src="logo.avif" alt="Website Logo" class="logo">
-        </a>
-        <h1 style="margin-left:-418px;">S̴o̴c̴i̴a̴l̴ ̴G̴u̴a̴r̴d̴</h1>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul class="menu" id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Statistics</a></li>
-            <li><a href="/signup.html">Signup</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li class="language-choice">
-                <select style="margin-right: 20px;" id="language-select">
-                    <option value="en">English</option>
-                    <option value="hi">Hindi</option>
-                    <option value="fr">French</option>
-                    <option value="es">Spanish</option>
-                    <option value="zh">Chinese</option>
-                </select>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-
+  
     <div class="container">
         <h2>Sign in to SocialGuard</h2>
         <img style="height: 160px;" src="Login.jpg" alt="LOGO.png" class="logo">
@@ -396,64 +129,6 @@ header {
           <button class="twitter"><img src="twiter.png" alt="Twitter"></button>
         </div>
       </div>
-
-        <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-          <div class="footer-info">
-              <h2 class="company-name">Your Company, Inc.</h2>
-              <p>Making the world a better place through constructing elegant hierarchies.</p>
-              <div class="social-icons">
-                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-              </div>
-          </div>
-          <div class="footer-links">
-              <div class="footer-section">
-                  <h4>Solutions</h4>
-                  <ul>
-                      <li><a href="#">Marketing</a></li>
-                      <li><a href="#">Analytics</a></li>
-                      <li><a href="#">Commerce</a></li>
-                      <li><a href="#">Insights</a></li>
-                  </ul>
-              </div>
-              <div class="footer-section">
-                  <h4>Support</h4>
-                  <ul>
-                      <li><a href="#">Pricing</a></li>
-                      <li><a href="#">Documentation</a></li>
-                      <li><a href="#">Guides</a></li>
-                      <li><a href="#">API Status</a></li>
-                  </ul>
-              </div>
-              <div class="footer-section">
-                  <h4>Company</h4>
-                  <ul>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Blog</a></li>
-                      <li><a href="#">Jobs</a></li>
-                      <li><a href="#">Press</a></li>
-                      <li><a href="#">Partners</a></li>
-                  </ul>
-              </div>
-              <div class="footer-section">
-                  <h4>Legal</h4>
-                  <ul>
-                      <li><a href="#">Claim</a></li>
-                      <li><a href="#">Privacy</a></li>
-                      <li><a href="#">Terms</a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-      <div class="footer-bottom">
-          <p>© 2024 SocialGuard, Inc. All rights reserved.</p>
-      </div>
-  </footer>
 
 <script src="script.js"></script>
 </body>

@@ -13,6 +13,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
 }
 
 .logo {
@@ -44,6 +45,7 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -58,8 +60,122 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #3399ff;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  a {
+    color: #3399ff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  } 
+
+/* Header and Navbar Styling */
+header {
+    background-color: #0a152f;
+    padding: 15px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #1c2b4a;
+    color: #ffdd00;
+    border-radius: 5px;
+}
+
+.language-choice {
+    margin-left: 20px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        display: none; /* Hidden by default */
+    }
+
+    .menu.active {
+        display: flex; /* Show when active */
+    }
+
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar h1 {
+        flex: 1;
+    }
+}
+
+
+
+
+/* Hamburger Menu */
+.hamburger {
+    margin-left: 280px;
+    margin-top: -20px;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+
 
 .google-btn {
     width: 100%;
